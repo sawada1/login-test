@@ -3,6 +3,8 @@
 This project is a submission for the **Senior Frontend Developer (Vue.js)** evaluation assignment provided by Vartur. It demonstrates skills in Vue 3, Vuetify, state management, API integration, routing, and authentication.
 
 ---
+# Demo
+https://vartur.netlify.app/
 
 ## 📦 Tech Stack
 

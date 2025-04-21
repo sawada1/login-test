@@ -1,14 +1,9 @@
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import { defineStore } from 'pinia';
 import { useRouter } from 'vue-router';
 
 export const useAuthStore = defineStore('auth', () => {
-  const count = ref(0)
-  const doubleCount = computed(() => count.value * 2)
-  function increment() {
-    count.value++
-  }
-  let router = useRouter();
+  const router = useRouter();
   const dialog = ref(false);
   const firstName = ref('admin');
   const password = ref('admin');
@@ -27,7 +22,6 @@ const onSubmit = () => {
 
     } else {
         messages.value.push('Both first name and password must be "admin"')
-        // alert('Both first name and password must be "admin"')
     }
 }
 
@@ -41,5 +35,5 @@ const logOut = () => {
 
 
 
-  return { count, doubleCount, increment , isLoggedIn , onSubmit , messages2 , messages , logOut }
+  return {isLoggedIn , onSubmit , messages2 , messages , logOut }
 })

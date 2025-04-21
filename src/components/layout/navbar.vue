@@ -69,7 +69,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { useAuthStore } from '@/stores/auth'
-let store = useAuthStore();
+const store = useAuthStore();
 const drawer = ref(false);
 const firstNameRules = [
     (value: string) => !!value || 'First name is required',
