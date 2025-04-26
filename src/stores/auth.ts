@@ -5,8 +5,8 @@ import { useRouter } from 'vue-router';
 export const useAuthStore = defineStore('auth', () => {
   const router = useRouter();
   const dialog = ref(false);
-  const firstName = ref('admin');
-  const password = ref('admin');
+  const firstName = ref('');
+  const password = ref('');
   const messages = ref<string[]>([])
   const messages2 = ref<string[]>([])
   const isLoggedIn = ref<boolean>(localStorage.getItem("login") === 'true')
