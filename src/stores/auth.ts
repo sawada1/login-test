@@ -11,7 +11,7 @@ export const useAuthStore = defineStore('auth', () => {
   const messages2 = ref<string[]>([])
   const isLoggedIn = ref<boolean>(localStorage.getItem("login") === 'true')
 
-const onSubmit = () => {
+const onSubmit = () => {  
     if (firstName.value === 'admin' && password.value === 'admin') {
         dialog.value = false;
         firstName.value = '';
@@ -35,5 +35,5 @@ const logOut = () => {
 
 
 
-  return {isLoggedIn , onSubmit , messages2 , messages , logOut }
+  return {isLoggedIn , onSubmit , messages2 , messages , logOut , firstName , password }
 })
