@@ -48,15 +48,15 @@ export const useCategoriesStore = defineStore('categories', () => {
     // Reactive data
     const itemsPerPage = ref(5)
     const serverItems = ref<Users[]>([])
-    const loading = ref(true)
+    const loading = ref(false)
     const totalItems = ref(0)
     
     const getCategories = async () => {
-        loading.value = false;
+        loading.value = true;
         const result = await useApi().get<Users[]>(`users`);
         if (result.status === 200) {
             users.value = result.data;
-            loading.value = true;
+            loading.value = false;
         }
     }
 
